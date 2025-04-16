@@ -381,9 +381,13 @@ const toggleProject = (id) => {
           <h2 className="text-3xl md:text-4xl font-bold text-center text-blue-600 mb-12">
             Contact Us
           </h2>
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-4  gap-8">
             {/* Address */}
-            <div>
+
+            <div className="flex items-center justify-center">
+          <img src={Logo} alt=""  className="w-32"/>
+          </div>
+            <div className="flex flex-col justify-center">
               <h3 className="text-lg font-semibold text-gray-800 mb-4">
                 Address:
               </h3>
@@ -405,7 +409,7 @@ const toggleProject = (id) => {
             </div>
 
             {/* Links */}
-            <div>
+            <div className="flex flex-col justify-center">
               <h3 className="text-lg font-semibold text-gray-800 mb-4">
                 Useful Links
               </h3>
@@ -473,13 +477,13 @@ const toggleProject = (id) => {
       </section>
 
       {/* Footer */}
-      <footer className="bg-white py-6 border-t border-gray-200">
+      {/* <footer className="bg-white py-6 border-t border-gray-200">
         <div className="max-w-6xl mx-auto px-4">
           <div className="flex items-center justify-center">
           <img src={Logo} alt=""  className="w-32"/>
           </div>
         </div>
-      </footer>
+      </footer> */}
     </div>
   );
 }
