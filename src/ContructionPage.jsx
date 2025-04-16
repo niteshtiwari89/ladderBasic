@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { MapPin, Mail, Phone, Home } from "lucide-react";
 import HomeLogo from "./assets/Logo.png";
+import HomeLogo2 from "./assets/Logo3.png";
 import Residental from "./assets/residental2.png";
 import Architectural from "./assets/Architectural.png";
 import Architect from "./assets/Architect.png";
@@ -69,12 +70,22 @@ const toggleProject = (id) => {
       {/* Header with Navigation */}
       <header className="relative w-full h-screen">
         {/* Background Image */}
+
+        <div className="md:block">
         <img
           src={HomeLogo}
           alt="Construction workers"
           className="absolute inset-0 w-full h-full object-cover z-0"
         />
+        </div>
 
+        <div className="sm:hidden">
+        <img
+          src={HomeLogo2}
+          alt="Construction workers"
+          className="absolute inset-0 w-full h-full object-cover z-0"
+        />
+        </div>
         {/* Overlay */}
         <div className="absolute inset-0  bg-opacity-30 z-10" />
 
