@@ -206,6 +206,9 @@ const toggleProject = (id) => {
                   </svg>
                 </div>
               </div>
+              <div className="flex justify-center font-bold text-xl">
+                Who We Are
+              </div>
               <p className="text-center text-gray-700">
                 We are a team of dedicated construction professionals committed
                 to delivering high-quality residential, commercial, and
@@ -231,13 +234,16 @@ const toggleProject = (id) => {
                   </svg>
                 </div>
               </div>
+              <div className="flex justify-center font-bold text-xl">
+                Our Mission
+              </div>
               <p className="text-center text-gray-700">
                 Our mission is to deliver reliable, innovative, and
                 cost-effective construction solutions while maintaining the
                 highest standards of safety, quality, and integrity.
               </p>
             </div>
-            <div className="bg-white p-6 rounded-lg shadow-sm">
+            <div className="bg-white p-6  rounded-lg shadow-sm">
               <div className="flex justify-center mb-4">
                 <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center">
                   <svg
@@ -261,6 +267,9 @@ const toggleProject = (id) => {
                     />
                   </svg>
                 </div>
+              </div>
+              <div className="flex justify-center font-bold text-xl">
+                Our Vision
               </div>
               <p className="text-center text-gray-700">
                 To be recognized as a trusted name in construction by building
