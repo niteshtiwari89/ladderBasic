@@ -384,10 +384,10 @@ const toggleProject = (id) => {
           <div className="grid md:grid-cols-4  gap-8">
             {/* Address */}
 
-            <div className="flex items-center justify-center">
+            <div className="flex items-start justify-center">
           <img src={Logo} alt=""  className="w-32"/>
           </div>
-            <div className="flex flex-col justify-center">
+            <div >
               <h3 className="text-lg font-semibold text-gray-800 mb-4">
                 Address:
               </h3>
@@ -409,7 +409,7 @@ const toggleProject = (id) => {
             </div>
 
             {/* Links */}
-            <div className="flex flex-col justify-center">
+            <div >
               <h3 className="text-lg font-semibold text-gray-800 mb-4">
                 Useful Links
               </h3>
