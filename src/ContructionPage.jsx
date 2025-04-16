@@ -175,7 +175,7 @@ const toggleProject = (id) => {
             Reliable. Efficient. Trusted Construction Services.
           </p>
           <button className="bg-white w-64 text-gray-800 font-semibold py-2 px-6 rounded-full hover:bg-gray-200 transition duration-300">
-            Get a Free Consultation
+            <a href="#contact">Get a Free Consultation</a>
           </button>
         </div>
       </header>
