@@ -8,7 +8,10 @@ import Architect from "./assets/Architect.png";
 import Project from "./assets/project.jpg";
 import Project2 from "./assets/project2.jpg";
 import Project3 from "./assets/project3.jpg";
-import Logo from './assets/mainLogo2.png'
+import Logo from "./assets/mainLogo2.png";
+import Building from './assets/building_1.png';
+import Building2 from './assets/building_2.png';
+import Building3 from './assets/building_3.png';
 
 export default function BlueLadderWebsite() {
   const [formData, setFormData] = useState({
@@ -18,10 +21,9 @@ export default function BlueLadderWebsite() {
 
   const [activeProject, setActiveProject] = useState(null);
 
-const toggleProject = (id) => {
-  setActiveProject(activeProject === id ? null : id);
-};
-
+  const toggleProject = (id) => {
+    setActiveProject(activeProject === id ? null : id);
+  };
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -59,6 +61,34 @@ const toggleProject = (id) => {
       image: Project3,
     },
   ];
+
+  const upcomingProjects = [
+    {
+      id: 1,
+      name: "Jarry Emperio",
+      tagline: "Coming Soon to Redefine Urban Living",
+      description:
+        "An upcoming residential landmark, blending smart design, luxurious comfort, and modern amenities — crafted for the lifestyle you deserve.",
+      image: Building,
+    },
+    {
+      id: 2,
+      name: "Aura",
+      tagline: "A Visionary Space by Madhavraya Multiventures",
+      description:
+        "An upcoming residential address where elegance meets innovation — offering refined design, peaceful surroundings, and a lifestyle that inspires.",
+      image: Building2,
+    },
+    {
+      id: 3,
+      name: "Jarry Emperio 2",
+      tagline: "The Next Chapter of Elegant Living",
+      description:
+        "An upcoming residential masterpiece designed to offer spacious layouts, refined finishes, and modern comforts — crafted to elevate your everyday life.",
+      image: Building3,
+    },
+  ];
+
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("Form submitted:", formData);
@@ -72,19 +102,19 @@ const toggleProject = (id) => {
         {/* Background Image */}
 
         <div className="md:block">
-        <img
-          src={HomeLogo}
-          alt="Construction workers"
-          className="absolute inset-0 w-full h-full object-cover z-0"
-        />
+          <img
+            src={HomeLogo}
+            alt="Construction workers"
+            className="absolute inset-0 w-full h-full object-cover z-0"
+          />
         </div>
 
         <div className="sm:hidden">
-        <img
-          src={HomeLogo2}
-          alt="Construction workers"
-          className="absolute inset-0 w-full h-full object-cover z-0"
-        />
+          <img
+            src={HomeLogo2}
+            alt="Construction workers"
+            className="absolute inset-0 w-full h-full object-cover z-0"
+          />
         </div>
         {/* Overlay */}
         <div className="absolute inset-0  bg-opacity-30 z-10" />
@@ -93,7 +123,7 @@ const toggleProject = (id) => {
         <div className="relative top-0 left-0 right-0 z-20 bg-white bg-opacity-90">
           <div className="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
             <div className="flex items-center">
-             <img src={Logo} alt=""  className="w-24"/>
+              <img src={Logo} alt="" className="w-24" />
             </div>
 
             {/* Desktop Menu */}
@@ -364,32 +394,78 @@ const toggleProject = (id) => {
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {projects.map((project) => (
-             <div
-             key={project.id}
-             className="bg-white rounded-lg overflow-hidden shadow-sm relative h-96 cursor-pointer group md:hover:scale-105 transition"
-             onClick={() => toggleProject(project.id)}
-           >
-             <img
-               src={project.image}
-               alt={project.name}
-               className={`w-full h-full object-cover transition-all duration-300 ${
-                 activeProject === project.id ? "opacity-30" : ""
-               }`}
-             />
-             <div
-               className={`absolute inset-0 flex flex-col justify-center p-6 bg-blue-100 bg-opacity-70 transition-opacity duration-300
-                 ${activeProject === project.id ? "opacity-100" : "opacity-0 md:group-hover:opacity-100"}`}
-             >
-               <h3 className="text-2xl font-bold text-gray-800 mb-2">
-                 {project.name}
-               </h3>
-               <h4 className="text-xl font-semibold text-gray-800 mb-4">
-                 — {project.tagline}
-               </h4>
-               <p className="text-gray-800">{project.description}</p>
-             </div>
-           </div>
-           
+              <div
+                key={project.id}
+                className="bg-white rounded-lg overflow-hidden shadow-sm relative h-96 cursor-pointer group md:hover:scale-105 transition"
+                onClick={() => toggleProject(project.id)}
+              >
+                <img
+                  src={project.image}
+                  alt={project.name}
+                  className={`w-full h-full object-cover transition-all duration-300 ${
+                    activeProject === project.id ? "opacity-30" : ""
+                  }`}
+                />
+                <div
+                  className={`absolute inset-0 flex flex-col justify-center p-6 bg-blue-100 bg-opacity-70 transition-opacity duration-300
+                 ${
+                   activeProject === project.id
+                     ? "opacity-100"
+                     : "opacity-0 md:group-hover:opacity-100"
+                 }`}
+                >
+                  <h3 className="text-2xl font-bold text-gray-800 mb-2">
+                    {project.name}
+                  </h3>
+                  <h4 className="text-xl font-semibold text-gray-800 mb-4">
+                    — {project.tagline}
+                  </h4>
+                  <p className="text-gray-800">{project.description}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Upcoming Projects */}
+
+      <section id="projects" className="py-16 bg-gray-100">
+        <div className="max-w-6xl mx-auto px-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-center text-blue-600 mb-12">
+            Upcoming Projects
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {upcomingProjects.map((project) => (
+              <div
+                key={project.id}
+                className="bg-white rounded-lg overflow-hidden shadow-sm relative h-96 cursor-pointer group md:hover:scale-105 transition"
+                onClick={() => toggleProject(project.id)}
+              >
+                <img
+                  src={project.image}
+                  alt={project.name}
+                  className={`w-full h-full object-cover transition-all duration-300 ${
+                    activeProject === project.id ? "opacity-30" : ""
+                  }`}
+                />
+                <div
+                  className={`absolute inset-0 flex flex-col justify-center p-6 bg-blue-100 bg-opacity-70 transition-opacity duration-300
+                 ${
+                   activeProject === project.id
+                     ? "opacity-100"
+                     : "opacity-0 md:group-hover:opacity-100"
+                 }`}
+                >
+                  <h3 className="text-2xl font-bold text-gray-800 mb-2">
+                    {project.name}
+                  </h3>
+                  <h4 className="text-xl font-semibold text-gray-800 mb-4">
+                    — {project.tagline}
+                  </h4>
+                  <p className="text-gray-800">{project.description}</p>
+                </div>
+              </div>
             ))}
           </div>
         </div>
@@ -405,9 +481,9 @@ const toggleProject = (id) => {
             {/* Address */}
 
             <div className="flex items-start justify-center">
-          <img src={Logo} alt=""  className="w-32"/>
-          </div>
-            <div >
+              <img src={Logo} alt="" className="w-32" />
+            </div>
+            <div>
               <h3 className="text-lg font-semibold text-gray-800 mb-4">
                 Address:
               </h3>
@@ -429,7 +505,7 @@ const toggleProject = (id) => {
             </div>
 
             {/* Links */}
-            <div >
+            <div>
               <h3 className="text-lg font-semibold text-gray-800 mb-4">
                 Useful Links
               </h3>
