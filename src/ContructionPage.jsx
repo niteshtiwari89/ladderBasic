@@ -120,7 +120,7 @@ export default function BlueLadderWebsite() {
         <div className="absolute inset-0  bg-opacity-30 z-10" />
 
         {/* Navbar */}
-        <div className="relative top-0 left-0 right-0 z-20 bg-white bg-opacity-90">
+        <div className="sticky top-0 left-0 right-0 z-30 bg-white bg-opacity-90">
           <div className="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
             <div className="flex items-center">
               <img src={Logo} alt="" className="w-24" />
