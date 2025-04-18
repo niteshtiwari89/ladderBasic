@@ -65,10 +65,10 @@ export default function BlueLadderWebsite() {
   const upcomingProjects = [
     {
       id: 4,
-      name: "Jarry Emperio",
-      tagline: "Coming Soon to Redefine Urban Living",
+      name: "Building 1",
+      tagline:" Name to be announced",
       description:
-        "An upcoming residential landmark, blending smart design, luxurious comfort, and modern amenities — crafted for the lifestyle you deserve.",
+        "An upcoming residential landmark offering 2 & 3 BHK homes, blending smart design, luxurious comfort, and modern amenities — crafted for the lifestyle you deserve.",
       image: Building,
     },
     {
@@ -81,11 +81,11 @@ export default function BlueLadderWebsite() {
     },
     {
       id: 6,
-      name: "Jarry Emperio 2",
-      tagline: "The Next Chapter of Elegant Living",
+      name: "Building 2",
+      tagline: "Name to be announced",
       description:
-        "An upcoming residential masterpiece designed to offer spacious layouts, refined finishes, and modern comforts — crafted to elevate your everyday life.",
-      image: Building3,
+       "An upcoming residential masterpiece offering 3 & 4 BHK homes, designed with spacious layouts, refined finishes, and modern comforts — crafted to elevate your everyday life",
+    image: Building3,
     },
   ];
 
