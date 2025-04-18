@@ -64,7 +64,7 @@ export default function BlueLadderWebsite() {
 
   const upcomingProjects = [
     {
-      id: 1,
+      id: 4,
       name: "Jarry Emperio",
       tagline: "Coming Soon to Redefine Urban Living",
       description:
@@ -72,7 +72,7 @@ export default function BlueLadderWebsite() {
       image: Building,
     },
     {
-      id: 2,
+      id: 5,
       name: "Aura",
       tagline: "A Visionary Space by Madhavraya Multiventures",
       description:
@@ -80,7 +80,7 @@ export default function BlueLadderWebsite() {
       image: Building2,
     },
     {
-      id: 3,
+      id: 6,
       name: "Jarry Emperio 2",
       tagline: "The Next Chapter of Elegant Living",
       description:
