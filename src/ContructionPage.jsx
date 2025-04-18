@@ -573,13 +573,13 @@ export default function BlueLadderWebsite() {
       </section>
 
       {/* Footer */}
-      {/* <footer className="bg-white py-6 border-t border-gray-200">
+       <footer className="bg-white py-6 border-t border-gray-200">
         <div className="max-w-6xl mx-auto px-4">
           <div className="flex items-center justify-center">
-          <img src={Logo} alt=""  className="w-32"/>
+          © 2025 BlueLadder. All Rights Reserved.
           </div>
         </div>
-      </footer> */}
+      </footer>
     </div>
   );
 }
